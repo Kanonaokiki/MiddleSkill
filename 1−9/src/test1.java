@@ -12,7 +12,7 @@ public class test1{
 		//      2.64ビット整数の「1111111111」を定義し2倍した値を出力しなさい。
 		long d = 0b1111111111L;
 		long result = d *2;
-		
+
 		System.out.println(result);
 
 		//      3.boolean型の変数の値に不正な文字列比較を入れてfalseを出力してください。
