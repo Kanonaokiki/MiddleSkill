@@ -66,3 +66,4 @@ MacBook Air (Retina, 13-inch, 2020)
 
 
 ⑬Linuxを学ぶのにおすすめの資格は何ですか？
+LinuC
