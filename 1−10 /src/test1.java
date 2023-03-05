@@ -39,10 +39,9 @@ public class test1 {
                 //問題4:この配列"numd"をコピーした配列名"new_numd"を作り"new_numd"の中身を出力してください。
                 int[] numd = {1, 3, 5, 7, 9};
 
-                int[] new_numd= numd;
-                for(int new_numd1: new_numd){
-                    System.out.println(new_numd1);
-                	}
+                int[] new_numd = Arrays.copyOf(numd, numd.length);
+
+                System.out.println(Arrays.toString(new_numd));
                 //改行
                 System.out.println("問５");
 
@@ -57,10 +56,11 @@ public class test1 {
                 int[] numf = {1, 3, 5, 7, 9};
 
                 int[] new_numf = new int[numf.length + 1];
+
                 for (int i = 0; i < numf.length; i++) {
                     new_numf[i] = numf[i];
                 }
-                new_numf[numf.length] = 10;
+                new_numf[new_numf.length - 1] = 10;
                 System.out.println(Arrays.toString(new_numf));
                 //改行
                 System.out.println("問７");
@@ -89,9 +89,7 @@ public class test1 {
                 System.out.println("問１０");
 
                 //問題10:Map"car"のキーとバリューを全て出力してください。※forEach文で行うこと
-                for (Map.Entry<String, String> car1 : car.entrySet()) {
-                    System.out.println(car1.getKey() +" "+ car1.getValue());
-                }
+                car.forEach((key, value) -> System.out.println(key + " " + value));
         }
 }
 
