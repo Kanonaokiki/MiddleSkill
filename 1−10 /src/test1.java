@@ -57,10 +57,13 @@ public class test1 {
 
                 int[] new_numf = new int[numf.length + 1];
 
-                for (int i = 0; i < numf.length; i++) {
-                    new_numf[i] = numf[i];
-                }
-                new_numf[new_numf.length - 1] = 10;
+//                for (int i = 0; i < numf.length; i++) {
+//                    new_numf[i] = numf[i];
+//                }
+//                new_numf[new_numf.length - 1] = 10;
+//                System.out.println(Arrays.toString(new_numf));
+                System.arraycopy(numf, 0, new_numf, 0, numf.length);
+                new_numf[numf.length] = 10;
                 System.out.println(Arrays.toString(new_numf));
                 //改行
                 System.out.println("問７");
