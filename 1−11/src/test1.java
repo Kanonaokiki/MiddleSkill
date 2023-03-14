@@ -23,7 +23,7 @@ public class test1 {
 
                 int numc = 1;
                 int numd = 2;
-                int intResult = numd > numc ? 2 : 1;
+                int intResult = numd > numc ? numd : numc;
 
                 System.out.println(intResult);
 
