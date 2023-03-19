@@ -37,15 +37,12 @@ public class test1 {
                 //try文の処理はthrow new を使い強制的に例外を発生させる事。
                 //改行
                 try {
-                	String str2 = "Programmer Life";
-                	int num = Integer.parseInt(str2); // NumberFormatException
-                	System.out.println(num);
-
-                } catch (NumberFormatException e) {
-                	System.out.println("何らかの例外が発生しました");
-
-                } catch (ArithmeticException e) {
-
+                    // 例外を発生させる処理
+                    throw new NumberFormatException();
+                } catch (Exception e) {
+                    if (e instanceof NumberFormatException) {
+                        System.out.println("何らかの例外が発生しました。");
+                    }
                 }
                 System.out.println("問4");
                 //問題4:例外処理を行うメリットを下記にコメント解答欄に記述しなさい
