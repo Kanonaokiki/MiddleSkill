@@ -2,12 +2,12 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2023-03-19T08:26:28.088282Z</date>
-  <millis>1679214388088</millis>
-  <nanos>282000</nanos>
+  <date>2023-03-19T08:21:01.302847Z</date>
+  <millis>1679214061302</millis>
+  <nanos>847000</nanos>
   <sequence>0</sequence>
   <logger>middleskill log</logger>
-  <level>INFO</level>
+  <level>SEVERE</level>
   <class>test1</class>
   <method>main</method>
   <thread>1</thread>

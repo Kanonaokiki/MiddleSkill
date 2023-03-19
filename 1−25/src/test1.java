@@ -1,33 +1,33 @@
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 public class test1{
         public static void main(String[] args){
                 //改行
                 System.out.println("問１");
                 //問題1:下記条件になるようログの出力を行いなさい。
-                Logger logger = Logger.getLogger(test1.class.getName());
 
-                try {
-                	FileHandler fHandler = new FileHandler("middleskill.log",true);
-                	fHandler.setFormatter(new SimpleFormatter());
-                	logger.addHandler(fHandler);
+                // Loggerインスタンスの生成
+               Logger sample_logger = Logger.getLogger("middleskill log");
 
+               // 現在のディレクトリ情報を取得
+               String path =  System.getProperty("user.dir"); path = new File(path, "middleskill.log").getPath();
+//               System.out.println(path);
 
-                	throw new IllegalArgumentException();
+               // Handlerクラスのインスタンス生成のときの例外処理のためのtry-catch構文
+               try{
+                       // Handlerインスタンスを生成
+                         Handler sample_handler = new FileHandler(path);
+                            // LoggerにHandlerを登録
+                        sample_logger.addHandler(sample_handler);
+               }catch(IOException e){}
 
-//                	String str2 = "Programmer Life";
-//                	int num = Integer.parseInt(str2); // NumberFormatException
-//                	System.out.println(num);
-
-                } catch (NumberFormatException e) {
-                	System.out.println(logger);
-                }catch (IOException e) {
-//                    e.printStackTrace();
-                }
-                logger.finest("ミドルスキルログが発生しました。");
+               // ログの出力
+               sample_logger.log(Level.INFO, "ミドルスキルログが発生しました。");
 
 //
 //                //条件１ 例外でヌルポが発生させヌルポをキャッチした場合のみログ出力がされるプログラムにする事
