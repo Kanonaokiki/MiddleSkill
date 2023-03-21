@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.IOException;
 import java.util.logging.FileHandler;
-import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,22 +9,52 @@ public class test1{
                 //問題1:下記条件になるようログの出力を行いなさい。
 
                 // Loggerインスタンスの生成
-               Logger sample_logger = Logger.getLogger("middleskill log");
+//               Logger sample_logger = Logger.getLogger("middleskill log");
+//
+//               // 現在のディレクトリ情報を取得
+//               String path =  System.getProperty("user.dir");
+//               path = new File(path, "middleskill.log").getPath();
+//
+//               // Handlerクラスのインスタンス生成のときの例外処理のためのtry-catch構文
+//               try{
+////            	   String str = null;
+////                   if (str == null) {
+////                       throw new NullPointerException();
+////                   }
+//                       // Handlerインスタンスを生成
+//                         Handler sample_handler = new FileHandler(path);
+//                            // LoggerにHandlerを登録
+//                        sample_logger.addHandler(sample_handler);
+//               }catch(IOException e){
+////               } catch (NullPointerException e) {
+////            	   sample_logger.log(Level.INFO, "ミドルスキルログが発生しました。");
+////            	   System.out.println("数字フォーマットエラーが発生しました");
+//               }
+//
+//               // ログの出力
+//               sample_logger.log(Level.INFO, "ミドルスキルログが発生しました。");
 
-               // 現在のディレクトリ情報を取得
-               String path =  System.getProperty("user.dir"); path = new File(path, "middleskill.log").getPath();
-//               System.out.println(path);
+                Logger logger = Logger.getLogger("middleskill log");
+                FileHandler handler = null;
+                try {
+                    handler = new FileHandler("src/middleskill.log");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                logger.addHandler(handler);
+//                logger.setUseParentHandlers(false);
 
-               // Handlerクラスのインスタンス生成のときの例外処理のためのtry-catch構文
-               try{
-                       // Handlerインスタンスを生成
-                         Handler sample_handler = new FileHandler(path);
-                            // LoggerにHandlerを登録
-                        sample_logger.addHandler(sample_handler);
-               }catch(IOException e){}
+                logger.setLevel(Level.INFO);
 
-               // ログの出力
-               sample_logger.log(Level.INFO, "ミドルスキルログが発生しました。");
+                try {
+                    // ここに例外を発生させる処理を記述
+               	   String str = null;
+               	   if (str == null) {
+                   throw new NullPointerException();
+               	   }
+                } catch (NullPointerException e) {
+                    logger.log(Level.INFO, "ミドルスキルログが発生しました。", e);
+                }
 
 //
 //                //条件１ 例外でヌルポが発生させヌルポをキャッチした場合のみログ出力がされるプログラムにする事

@@ -2,15 +2,23 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2023-03-19T08:21:01.302847Z</date>
-  <millis>1679214061302</millis>
-  <nanos>847000</nanos>
+  <date>2023-03-21T06:21:14.265744Z</date>
+  <millis>1679379674265</millis>
+  <nanos>744000</nanos>
   <sequence>0</sequence>
   <logger>middleskill log</logger>
-  <level>SEVERE</level>
+  <level>INFO</level>
   <class>test1</class>
   <method>main</method>
   <thread>1</thread>
   <message>ミドルスキルログが発生しました。</message>
+  <exception>
+    <message>java.lang.NullPointerException</message>
+    <frame>
+      <class>test1</class>
+      <method>main</method>
+      <line>53</line>
+    </frame>
+  </exception>
 </record>
 </log>
