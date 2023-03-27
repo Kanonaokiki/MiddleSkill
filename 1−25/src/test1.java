@@ -1,6 +1,8 @@
+import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class test1{
         public static void main(String[] args){
@@ -38,23 +40,19 @@ public class test1{
                 FileHandler handler = null;
                 try {
                     handler = new FileHandler("src/middleskill.log");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                logger.addHandler(handler);
-//                logger.setUseParentHandlers(false);
 
-                logger.setLevel(Level.INFO);
-
-                try {
-                    // ここに例外を発生させる処理を記述
-               	   String str = null;
-               	   if (str == null) {
-                   throw new NullPointerException();
-               	   }
+                    handler.setFormatter(new SimpleFormatter());
+                    logger.addHandler(handler);
+                    logger.setLevel(Level.INFO);
+                    throw new NullPointerException();
                 } catch (NullPointerException e) {
-                    logger.log(Level.INFO, "ミドルスキルログが発生しました。", e);
-                }
+                    logger.log(Level.INFO, "ミドルスキルログが発生しました。",e);
+
+                    // ここに例外を発生させる処理を記述
+
+                } catch (SecurityException | IOException e) {
+
+				}
 
 //
 //                //条件１ 例外でヌルポが発生させヌルポをキャッチした場合のみログ出力がされるプログラムにする事
