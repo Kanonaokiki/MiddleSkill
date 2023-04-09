@@ -11,6 +11,7 @@ public class checkTest {
 		//		Ctr + Shift + R
 		//改行
 
+
 		System.out.println("問２");
 		//問2 リファクタリングをする時のショートカットキーは何ですか？
 		//		Shift + Alt + R
@@ -30,13 +31,15 @@ public class checkTest {
 
 		System.out.println("問５");
 		//問5　Road博物館の入場料金は、一人1000円であるが、10人以上のチームなら一人820円、20人以上の団体なら一人700円である。人数を入力し、入場料の合計を計算するプログラムを作成せよ。(if文で上記文章を作ってください)
-		int Admission =0;
+		int Admission =10;
 
 		if(Admission>=20) {
 			System.out.println(Admission*700);
 		}else if(Admission>=10) {
 			System.out.println(Admission*820);
-		}System.out.println(Admission*1000);
+		}else{
+			System.out.println(Admission*1000);
+		}
 		//改行
 
 		System.out.println("問６");
