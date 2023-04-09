@@ -18,6 +18,11 @@
   price decimal(10,2),
   category varchar(255))
 
+comment on column products.product_id is '製品ID'
+comment on column products.name is '製品名'
+comment on column products.price is '価格'
+comment on column products.category is 'カテゴリ'
+
 注文情報テーブル
 　create table orders(
 　order_id int primary key,
@@ -27,12 +32,22 @@
 　foreign key(customer_id)
 　references customers(customer_id))
 
+comment on column orders.order_id is '注文ID'
+comment on column orders.customer_id is '顧客ID'
+comment on column orders.order_date is '注文日'
+comment on column orders.total is '合計金額'
+
 顧客情報テーブル
 　create table customers(
 　customer_id int primary key,
 　name varchar(255),
 　email varchar(255),
 　phone varchar(255))　
+
+comment on column customers.customer_id is '顧客ID'
+comment on column customers.name is '顧客名'
+comment on column customers.email is 'メールアドレス'
+comment on column customers.phone is '電話番号'
 
 注文アイテムテーブル
 　create table order_items(
@@ -43,6 +58,11 @@
 　primary key(order_id,product_id) ,
 　foreign key(order_id)references orders(order_id),
 　foreign key(product_id)references products(product_id)
+
+comment on column order_items.order_id is '注文ID'
+comment on column order_items.product_id is '製品ID'
+comment on column order_items.quantity is '数量'
+comment on column order_items.price is '価格'
 
 
 
