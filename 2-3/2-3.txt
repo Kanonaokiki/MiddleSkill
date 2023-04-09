@@ -1,4 +1,4 @@
-﻿⚫️課題2−3
+⚫️課題2−3
 
 
 エビデンス写真を格納してからプッシュしてください。
@@ -8,49 +8,87 @@
 ①下記テーブルのDMLとDDLの提出及びテーブルスクショをエビデンスとして残すこと
 
 
-DDL回答
-「   」
-DML回答
-「   」
+----------------DDL回答----------------
+
+
+製品情報テーブル
+　create table products(
+  product_id int primary key,
+  name varchar(255),
+  price decimal(10,2),
+  category varchar(255))
+
+注文情報テーブル
+　create table orders(
+　order_id int primary key,
+　customer_id  int,
+　order_date date,
+　total decimal(10,2),
+　foreign key(customer_id)
+　references customers(customer_id))
+
+顧客情報テーブル
+　create table customers(
+　customer_id int primary key,
+　name varchar(255),
+　email varchar(255),
+　phone varchar(255))　
+
+注文アイテムテーブル
+　create table order_items(
+　order_id int,
+　product_id int,
+　quantity int,
+　price decimal(10,2),
+　primary key(order_id,product_id) ,
+　foreign key(order_id)references orders(order_id),
+　foreign key(product_id)references products(product_id)
 
 
 
-
-●ER図（ネットショッピング情報）
-  
-
-
-
-
-
-
-
-
+---------------DML回答----------------
+製品情報テーブル
+　insert into products(product_id,name,price,category)
+　values
+(1,'iPhone12',80000,'スマートフォン'),
+(2,'iPad Pro',120000,'タブレット'),
+(3,'MacBook Pro',200000,'パソコン'),
+(4,'エアコン',50000,'家電'),
+(5,'テレビ',100000,'家電')
 
 
-
-
-
-
-
-
-
-
-
-
-
-●格納データ
+注文情報テーブル
+　insert into orders(order_id,customer_id,order_date,total)
+　values
+(1,1,'2022/1/1',160000),
+(2,1,'2022/2/1',240000),
+(3,2,'2022/3/1',120000),
+(4,3,'2022/4/1',100000)
 
 
 顧客情報テーブル
-  
+　insert into customers(customer_id,name,email,phone)
+　values
+(1,'山田太郎','yamada@example.com','090-1234-5678'),
+(2,'田中花子','tanaka@example.com','010-1234-5678'),
+(3,'鈴木次郎','suzuki@example.com','020-1234-5678')
 
-注文情報テーブル
+
+注文アイテムテーブル
+　insert into order_items(order_id,product_id,quantity,price)
+　values
+(1,1,2,80000),
+(2,3,1,200000),
+(2,4,1,50000),
+(2,5,2,200000),
+(3,2,1,120000),
+(4,4,2,100000)
 
 
-  
 
-製品情報テーブル
+updateを着手しており
+テーブルのスクショが変わってしまうので
+取れませんでした。
 
 
   
