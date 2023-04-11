@@ -23,6 +23,8 @@ comment on column products.name is '製品名'
 comment on column products.price is '価格'
 comment on column products.category is 'カテゴリ'
 
+comment on table products is '製品情報'
+
 注文情報テーブル
 　create table orders(
 　order_id int primary key,
@@ -37,6 +39,8 @@ comment on column orders.customer_id is '顧客ID'
 comment on column orders.order_date is '注文日'
 comment on column orders.total is '合計金額'
 
+comment on table orders is '注文情報'
+
 顧客情報テーブル
 　create table customers(
 　customer_id int primary key,
@@ -48,6 +52,8 @@ comment on column customers.customer_id is '顧客ID'
 comment on column customers.name is '顧客名'
 comment on column customers.email is 'メールアドレス'
 comment on column customers.phone is '電話番号'
+
+comment on table customers is '顧客情報'
 
 注文アイテムテーブル
 　create table order_items(
@@ -64,7 +70,7 @@ comment on column order_items.product_id is '製品ID'
 comment on column order_items.quantity is '数量'
 comment on column order_items.price is '価格'
 
-
+comment on table order_items is '注文アイテム'
 
 ---------------DML回答----------------
 製品情報テーブル
