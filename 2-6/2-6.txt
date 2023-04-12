@@ -1,0 +1,27 @@
+⚫️課題2−6
+
+
+エビデンス写真を格納してからプッシュしてください。
+※誤ったSQL文を実行した場合元に戻すのが面倒なため問題を回答する前にCSV形式でデータのバックアップを取得しておくこと
+例）エビデンス問①
+
+
+実行SQL文と実行結果スクショを提出すること。
+
+
+●ER図（ネットショッピング情報）
+  
+
+
+
+①顧客ID「1」が注文した注文アイテムテーブルを削除するSQL文
+※EXISTSを利用すること
+
+
+DELETE FROM order_items
+WHERE EXISTS (
+  SELECT *
+  FROM orders
+  WHERE order_items.order_id = orders.order_id
+    AND orders.customer_id = 1
+);
