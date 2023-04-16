@@ -1,0 +1,23 @@
+⚫️課題3-5
+
+
+①リポジトリーとは何ですか？
+　データアクセスを抽象化し、オブジェクトの集合へ格納、取得、検索するかのような振る舞う
+
+
+
+②次の中でリポジトリに当てはまるものはどれになりますか？(controller、service、view、seviceimpl、entity、dao、daoimpl)
+　dao
+
+
+
+③次の中でリポジトリで取得した値を格納するものはどれですか？(controller、service、view、seviceimpl、entity、dao、daoimpl)
+ 
+  entity
+ 
+
+
+
+
+④AOPとは何ですか？
+ 同じ処理を複数箇所に記述する必要がなくなり,共通処理を外部から注入する。

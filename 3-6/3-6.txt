@@ -1,0 +1,25 @@
+⚫️課題3-6
+
+
+①formやentity、dtoをまとめて何といますか？
+　Bean
+
+
+
+②formの特徴は何ですか？
+　HTTPのPOSTメソッドで送信された値(=formタグの中身)が入っている
+
+
+
+③entityの特徴は何ですか？
+　DBに登録・更新する値を入れておく。
+
+
+
+④dtoの特徴は何ですか？
+　formからentityへの変換を行う際のデータ交換用のBean
+
+
+
+⑤form、entity、dtoのうちDBに大きく携わるのはどれになりますか？
+　entity
