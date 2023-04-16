@@ -1,0 +1,50 @@
+⚫️課題3-8
+
+
+①Thymeleafとは何ですか？
+画面デザインとデータを組み合わせることで画面に表示する仕組み
+
+
+
+②Thymeleafで処理できるテンプレートエンジンはどのようなものがありますか？
+
+・HTML
+
+・JavaScript
+
+・CSS
+
+
+③ThymeleafとJspどちらの方が利便性が高いですか？またその理由も答えなさい。
+
+Jsp
+理由：画面表示に関する処理しか記述できないため
+
+
+④Thymeleafで条件演算子はどのように記述しますか？
+
+「　th:text="${age} < 18 ? '未成年' : '成人'"　」のように記述する
+
+
+
+⑤Thymeleafで条件式に使う属性は何ですか？
+
+「　th:if　」属性
+
+
+
+
+⑥Thymeleafで繰り返し処理に使う属性は何ですか？
+「　th:each　」属性
+
+
+
+⑦HTMLにそのままThymeleafのタグを利用しようとして使用することはできません。
+そのためThymeleafのタグを使用するためHTMLにはどんな記述が必要でしょうか？
+headタグの前のhtmlタグを
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">のように記述する
+
+
+
+⑧formタグのactionタグに相当し、リンク式を用いてフォームを送信するURLを指定する属性は何ですか？
+「　th:href　」属性
