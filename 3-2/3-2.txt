@@ -33,10 +33,16 @@ model
 
 
 
-「view」→「controller」→「service」→「serviceimpl」
+「view」→「controller」→「form」→「controller」
 →「dao」→「daoimpl」→「DB」→「Entity」→「form」
 →「controller」→「service」→「serviceimpl」
-→「dao」→「Entity」→「controller」→「view」
+→「dao」→「Entity」→「controller」→「view」」
+
+「view」→「controller」→「　form 」→「controller」→「　sevice 」→「　serviceimpl 」
+→「　dao　」→「　daoimpl　」→「Entity」→「DB」→「Entity」→「daoimpl」
+→「　dao  」→「　serviceimpl 」→「　sevice 」→「controller」→「　form 」→「controller」
+→「view」
+
 
 
 

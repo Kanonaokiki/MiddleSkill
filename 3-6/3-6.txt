@@ -2,7 +2,7 @@
 
 
 ①formやentity、dtoをまとめて何といますか？
-　「データ転送オブジェクト（Data Transfer Object）」
+　Bean
 
 
 
